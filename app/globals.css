@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  --background: #faf8f4;
+  --ink: #211f1c;
+  --muted: #97908a;
+  --pink: #f3e2dc;
+  --pink-soft: #f8efeb;
+  --line: #e8e1d9;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-pink: var(--pink);
+  --color-pink-soft: var(--pink-soft);
+  --color-line: var(--line);
+  --font-en: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-jp: var(--font-zen), "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN",
+    "Yu Gothic", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--ink);
+  font-family: var(--font-jp);
+  font-feature-settings: "palt";
+  letter-spacing: 0.06em;
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--pink);
+}
