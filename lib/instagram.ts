@@ -7,8 +7,7 @@ export type InstagramPost = {
   caption: string;
 };
 
-// TODO: 実際のアカウント名に差し替える
-export const instagramUser = "hour_hairsalon";
+export const instagramUser = "hour._hair";
 
 export const instagramPosts: InstagramPost[] = [
   {
