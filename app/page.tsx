@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ReserveButton from "@/components/ReserveButton";
-import { instagramPosts, instagramUser } from "@/lib/instagram";
+import { getInstagramPosts, instagramUser } from "@/lib/instagram";
 import { menuCategories, priceLabel } from "@/lib/menu";
 import { site } from "@/lib/site";
 
@@ -16,7 +16,8 @@ function SectionHeading({ en, ja }: { en: string; ja: string }) {
   );
 }
 
-export default function Home() {
+export default async function Home() {
+  const instagramPosts = await getInstagramPosts();
   return (
     <div>
       {/* hero — 店内写真。壁が明るいのでロゴはインク色で載せる */}
@@ -114,11 +115,13 @@ export default function Home() {
                 className="group block"
               >
                 <div className="overflow-hidden bg-pink-soft">
-                  <Image
+                  {/* 画像はInstagramのCDNから配信されホスト名が変わりうるため、
+                      next/image を通さず plain img で表示する */}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
                     src={post.image}
-                    alt={post.caption}
-                    width={800}
-                    height={800}
+                    alt={post.caption || "Instagramの投稿"}
+                    loading="lazy"
                     className="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                   />
                 </div>
