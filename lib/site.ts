@@ -6,6 +6,8 @@ export const site = {
   tel: "070-5577-1105",
   email: "info@hour-hairsalon.jp",
   address: "〒403-0004 山梨県富士吉田市緑ヶ丘1-4-19 相川ビルC号",
+  // 表示用（狭い画面で変な位置で折れないよう2行に分ける）
+  addressLines: ["〒403-0004 山梨県富士吉田市", "緑ヶ丘1-4-19 相川ビルC号"],
   addressEn: "Aikawa Bldg C, 1-4-19 Midorigaoka, Fujiyoshida, Yamanashi",
   hours: [
     { label: "営業時間", value: "10:00 – 21:00" },

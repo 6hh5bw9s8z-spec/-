@@ -14,7 +14,8 @@ export default function Footer() {
               hair salon
             </p>
             <p className="mt-6 max-w-xs text-xs leading-7 text-muted">
-              {site.address}
+              <span className="inline-block">{site.addressLines[0]}</span>
+              <span className="inline-block">{site.addressLines[1]}</span>
               <br />
               tel. {site.tel}
             </p>

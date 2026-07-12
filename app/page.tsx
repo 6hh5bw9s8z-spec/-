@@ -47,15 +47,18 @@ export default function Home() {
       <section className="mx-auto max-w-2xl px-5 py-24 text-center md:py-32">
         <SectionHeading en="concept" ja="コンセプト" />
         <p className="mt-10 text-sm leading-9">
-          いそがしい毎日から、すこしだけ離れて。
+          <span className="inline-block">いそがしい毎日から、</span>
+          <span className="inline-block">すこしだけ離れて。</span>
           <br />
-          hour は「時間」を意味する名前のとおり、
+          <span className="inline-block">hour は「時間」を意味する名前のとおり、</span>
           <br className="hidden md:block" />
-          髪と向き合うひとときを、静かに、丁寧に過ごすための場所です。
+          <span className="inline-block">髪と向き合うひとときを、</span>
+          <span className="inline-block">静かに、丁寧に過ごすための場所です。</span>
         </p>
         <p className="mt-6 text-sm leading-9 text-muted">
-          余白と光を大切にした空間で、
-          あなたの輪郭に寄り添うスタイルを一緒に見つけます。
+          <span className="inline-block">余白と光を大切にした空間で、</span>
+          <span className="inline-block">あなたの輪郭に寄り添うスタイルを</span>
+          <span className="inline-block">一緒に見つけます。</span>
         </p>
       </section>
 
@@ -119,9 +122,15 @@ export default function Home() {
       <section className="border-t border-line">
         <div className="mx-auto max-w-3xl px-5 py-24 text-center md:py-32">
           <SectionHeading en="access" ja="アクセス" />
-          <p className="mt-8 text-sm leading-8">{site.address}</p>
+          <p className="mt-8 text-sm leading-8">
+            <span className="inline-block">{site.addressLines[0]}</span>
+            <span className="inline-block">{site.addressLines[1]}</span>
+          </p>
           <div className="mt-6 space-y-1 text-xs text-muted">
-            <p>富士急行線 月江寺駅より徒歩3分　／　駐車場2台完備</p>
+            <p>
+              <span className="inline-block">富士急行線 月江寺駅より徒歩3分</span>
+              <span className="inline-block">　／　駐車場2台完備</span>
+            </p>
             {site.hours.map((h) => (
               <p key={h.label}>
                 {h.label} {h.value}

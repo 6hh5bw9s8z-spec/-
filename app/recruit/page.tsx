@@ -40,9 +40,12 @@ export default function RecruitPage() {
           「長く、心地よく働けるサロン」を、一緒につくりませんか。
         </p>
         <p className="mx-auto mt-4 max-w-xl text-xs leading-7 text-muted">
-          hour は小さなサロンです。だからこそ、一人ひとりのお客さまと、
-          そして働くスタッフ一人ひとりと、丁寧に向き合うことを大切にしています。
-          経験よりも、髪とひとが好きという気持ちを重視します。
+          <span className="inline-block">hour は小さなサロンです。</span>
+          <span className="inline-block">だからこそ、一人ひとりのお客さまと、</span>
+          <span className="inline-block">そして働くスタッフ一人ひとりと、</span>
+          <span className="inline-block">丁寧に向き合うことを大切にしています。</span>
+          <span className="inline-block">経験よりも、</span>
+          <span className="inline-block">髪とひとが好きという気持ちを重視します。</span>
         </p>
       </div>
 

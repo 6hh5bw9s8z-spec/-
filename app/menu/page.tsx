@@ -14,10 +14,12 @@ export default function MenuPage() {
       <PageTitle en="price list" ja="メニュー・料金" />
 
       <p className="text-center text-xs text-muted">
-        価格はすべて税込表示です。仕上がりの状態や髪の長さにより
-        お時間・料金が変わる場合があります。
+        <span className="inline-block">価格はすべて税込表示です。</span>
+        <span className="inline-block">仕上がりの状態や髪の長さにより</span>
+        <span className="inline-block">お時間・料金が変わる場合があります。</span>
         <br />
-        胸下の長さの方はレングスチャージ ¥1,500 を頂戴します。
+        <span className="inline-block">胸下の長さの方は</span>
+        <span className="inline-block">レングスチャージ ¥1,500 を頂戴します。</span>
       </p>
 
       <div className="mt-20 space-y-20 text-center">

@@ -18,7 +18,10 @@ export default function AccessPage() {
         <h2 className="font-[family-name:var(--font-en)] text-2xl tracking-[0.25em]">
           hour hair salon
         </h2>
-        <p className="mt-6 text-sm leading-8">{site.address}</p>
+        <p className="mt-6 text-sm leading-8">
+          <span className="inline-block">{site.addressLines[0]}</span>
+          <span className="inline-block">{site.addressLines[1]}</span>
+        </p>
         <p className="mt-2">
           <a
             href={`tel:${site.tel.replaceAll("-", "")}`}
@@ -61,7 +64,8 @@ export default function AccessPage() {
             住所
           </dt>
           <dd className="text-sm leading-7">
-            {site.address}
+            <span className="inline-block">{site.addressLines[0]}</span>
+            <span className="inline-block">{site.addressLines[1]}</span>
             <br />
             <span className="font-[family-name:var(--font-en)] text-xs tracking-[0.1em] text-muted">
               {site.addressEn}
@@ -107,7 +111,9 @@ export default function AccessPage() {
             お支払い
           </dt>
           <dd className="text-sm leading-7">
-            現金・各種クレジットカード・交通系 IC・QR 決済（Square 決済対応）
+            <span className="inline-block">現金・各種クレジットカード・</span>
+            <span className="inline-block">交通系 IC・QR 決済</span>
+            <span className="inline-block">（Square 決済対応）</span>
           </dd>
         </div>
       </dl>
