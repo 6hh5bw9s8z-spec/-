@@ -4,11 +4,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { nav } from "@/lib/site";
-import { useCart } from "@/lib/cart";
 
 export default function Header() {
   const pathname = usePathname();
-  const { count } = useCart();
   const [open, setOpen] = useState(false);
 
   const close = () => setOpen(false);
@@ -43,36 +41,22 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
-            <Link
-              href="/cart"
-              className="font-[family-name:var(--font-en)] text-sm tracking-[0.25em] opacity-70 transition-opacity hover:opacity-50"
-            >
-              cart{count > 0 && ` (${count})`}
-            </Link>
           </nav>
 
-          <div className="flex items-center gap-5 md:hidden">
-            <Link
-              href="/cart"
-              className="font-[family-name:var(--font-en)] text-sm tracking-[0.2em]"
-            >
-              cart{count > 0 && ` (${count})`}
-            </Link>
-            <button
-              type="button"
-              aria-label="メニューを開閉する"
-              aria-expanded={open}
-              onClick={() => setOpen((v) => !v)}
-              className="flex h-8 w-8 flex-col items-center justify-center gap-1.5"
-            >
-              <span
-                className={`block h-px w-6 bg-ink transition-transform ${open ? "translate-y-[3.5px] rotate-45" : ""}`}
-              />
-              <span
-                className={`block h-px w-6 bg-ink transition-transform ${open ? "-translate-y-[3.5px] -rotate-45" : ""}`}
-              />
-            </button>
-          </div>
+          <button
+            type="button"
+            aria-label="メニューを開閉する"
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+            className="flex h-8 w-8 flex-col items-center justify-center gap-1.5 md:hidden"
+          >
+            <span
+              className={`block h-px w-6 bg-ink transition-transform ${open ? "translate-y-[3.5px] rotate-45" : ""}`}
+            />
+            <span
+              className={`block h-px w-6 bg-ink transition-transform ${open ? "-translate-y-[3.5px] -rotate-45" : ""}`}
+            />
+          </button>
         </div>
       </header>
 
@@ -107,18 +91,6 @@ export default function Header() {
               </span>
             </Link>
           ))}
-          <Link
-            href="/cart"
-            onClick={close}
-            className="flex items-center justify-between border-b border-line py-5"
-          >
-            <span className="font-[family-name:var(--font-en)] text-base tracking-[0.25em]">
-              cart{count > 0 && ` (${count})`}
-            </span>
-            <span aria-hidden className="text-muted">
-              ›
-            </span>
-          </Link>
         </nav>
       </div>
     </>

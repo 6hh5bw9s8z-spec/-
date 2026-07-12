@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
-  <rect width="800" height="1000" fill="#f4ece4" />
-  <g>
-    <path d="M 300 420 Q 300 380 340 380 L 460 380 Q 500 380 500 420 L 500 450 L 300 450 Z" fill="#efe3dc" stroke="#8f8078" stroke-width="5" />
-    <line x1="325" y1="450" x2="325" y2="590" fill="none" stroke="#8f8078" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /><line x1="350" y1="450" x2="350" y2="590" fill="none" stroke="#8f8078" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /><line x1="375" y1="450" x2="375" y2="590" fill="none" stroke="#8f8078" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /><line x1="400" y1="450" x2="400" y2="590" fill="none" stroke="#8f8078" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /><line x1="425" y1="450" x2="425" y2="590" fill="none" stroke="#8f8078" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /><line x1="450" y1="450" x2="450" y2="590" fill="none" stroke="#8f8078" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /><line x1="475" y1="450" x2="475" y2="590" fill="none" stroke="#8f8078" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
-  </g>
-  <text x="400" y="760" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" letter-spacing="14" fill="#5f574f">hour</text>
-  <text x="400" y="800" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="15" letter-spacing="6" fill="#9b9089">wood comb</text>
-</svg>

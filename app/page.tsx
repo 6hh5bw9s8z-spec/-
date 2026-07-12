@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import ProductCard from "@/components/ProductCard";
+import ReserveButton from "@/components/ReserveButton";
 import { menuCategories, priceLabel } from "@/lib/menu";
-import { products } from "@/lib/products";
 import { site } from "@/lib/site";
 
 function SectionHeading({ en, ja }: { en: string; ja: string }) {
@@ -17,9 +16,6 @@ function SectionHeading({ en, ja }: { en: string; ja: string }) {
 }
 
 export default function Home() {
-  const featured = products.slice(0, 4);
-  const menuPreview = menuCategories.slice(0, 3);
-
   return (
     <div>
       {/* hero — 店内写真。壁が明るいのでロゴはインク色で載せる */}
@@ -39,9 +35,6 @@ export default function Home() {
             hair&nbsp;&nbsp;salon
           </span>
         </h1>
-        <p className="relative mt-2 -translate-y-16 text-xs tracking-[0.4em] text-ink/70 md:-translate-y-10">
-          {site.tagline}
-        </p>
         <span
           aria-hidden
           className="absolute bottom-10 font-[family-name:var(--font-en)] text-[10px] tracking-[0.4em] text-ink/60"
@@ -51,7 +44,7 @@ export default function Home() {
       </section>
 
       {/* concept */}
-      <section className="mx-auto max-w-2xl px-5 pb-28 text-center md:pb-36">
+      <section className="mx-auto max-w-2xl px-5 py-24 text-center md:py-32">
         <SectionHeading en="concept" ja="コンセプト" />
         <p className="mt-10 text-sm leading-9">
           いそがしい毎日から、すこしだけ離れて。
@@ -71,7 +64,7 @@ export default function Home() {
         <div className="mx-auto max-w-4xl px-5 py-24 md:py-32">
           <SectionHeading en="menu" ja="メニュー" />
           <div className="mt-14 grid gap-12 md:grid-cols-3">
-            {menuPreview.map((category) => (
+            {menuCategories.slice(0, 3).map((category) => (
               <div key={category.id}>
                 <h3 className="font-[family-name:var(--font-en)] text-lg tracking-[0.3em]">
                   {category.title}
@@ -82,7 +75,7 @@ export default function Home() {
                       key={item.name}
                       className="flex items-baseline justify-between gap-4 text-xs"
                     >
-                      <span>{item.name}</span>
+                      <span>{item.ja}</span>
                       <span className="shrink-0 text-muted">
                         {priceLabel(item)}
                       </span>
@@ -103,29 +96,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* store */}
-      <section className="border-t border-line bg-pink-soft/60">
-        <div className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
-          <SectionHeading en="store" ja="オンラインストア" />
-          <p className="mt-6 text-center text-xs leading-7 text-muted">
-            サロンで使っているオリジナルプロダクトを、オンラインでもお求めいただけます。
-          </p>
-          <div className="mt-14 grid grid-cols-2 gap-x-5 gap-y-12 md:grid-cols-4 md:gap-x-8">
-            {featured.map((product) => (
-              <ProductCard key={product.slug} product={product} />
-            ))}
-          </div>
-          <div className="mt-14 text-center">
-            <Link
-              href="/store"
-              className="inline-block border border-ink px-12 py-3 font-[family-name:var(--font-en)] text-xs tracking-[0.3em] transition-colors hover:bg-ink hover:text-background"
-            >
-              view all products
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* reserve cta */}
       <section className="border-t border-line bg-pink">
         <div className="mx-auto max-w-3xl px-5 py-24 text-center md:py-32">
@@ -134,12 +104,7 @@ export default function Home() {
             ご予約はオンラインまたはお電話にて承ります。
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 md:flex-row">
-            <Link
-              href="/reserve"
-              className="inline-block w-64 border border-ink bg-ink px-8 py-4 text-center font-[family-name:var(--font-en)] text-xs tracking-[0.3em] text-background transition-opacity hover:opacity-70"
-            >
-              online reservation
-            </Link>
+            <ReserveButton className="inline-block w-64 border border-ink bg-ink px-8 py-4 text-center font-[family-name:var(--font-en)] text-xs tracking-[0.3em] text-background transition-opacity hover:opacity-70" />
             <a
               href={`tel:${site.tel.replaceAll("-", "")}`}
               className="inline-block w-64 border border-ink px-8 py-4 text-center font-[family-name:var(--font-en)] text-xs tracking-[0.3em] transition-colors hover:bg-ink hover:text-background"
@@ -156,6 +121,7 @@ export default function Home() {
           <SectionHeading en="access" ja="アクセス" />
           <p className="mt-8 text-sm leading-8">{site.address}</p>
           <div className="mt-6 space-y-1 text-xs text-muted">
+            <p>富士急行線 月江寺駅より徒歩3分　／　駐車場2台完備</p>
             {site.hours.map((h) => (
               <p key={h.label}>
                 {h.label} {h.value}

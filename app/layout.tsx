@@ -3,7 +3,6 @@ import { Cormorant_Garamond, Zen_Kaku_Gothic_New } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { CartProvider } from "@/lib/cart";
 import { site } from "@/lib/site";
 
 const cormorant = Cormorant_Garamond({
@@ -37,11 +36,9 @@ export default function RootLayout({
       className={`${cormorant.variable} ${zenKaku.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
-        <CartProvider>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </CartProvider>
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   );

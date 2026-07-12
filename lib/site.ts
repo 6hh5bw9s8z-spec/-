@@ -1,9 +1,8 @@
 export const site = {
   name: "hour",
   nameFull: "hour hair salon",
-  tagline: "時間を、ほどく場所。",
   description:
-    "hour hair salon ― 山梨県富士吉田市のヘアサロン。カット・カラー・パーマとオリジナルプロダクトのオンラインストア。",
+    "hour hair salon ― 山梨県富士吉田市のヘアサロン。カット・カラー・トリートメント・パーマ。オンライン予約承ります。",
   tel: "070-5577-1105",
   email: "info@hour-hairsalon.jp",
   address: "〒403-0004 山梨県富士吉田市緑ヶ丘1-4-19 相川ビルC号",
@@ -12,6 +11,10 @@ export const site = {
     { label: "営業時間", value: "10:00 – 21:00" },
     { label: "定休日", value: "毎週火曜・ほか月2日（不定休）" },
   ],
+  // オンライン予約ページのURL（設定するとreserveページ・予約ボタンがここへリンクする）
+  reserveUrl: "",
+  // Googleマップの共有リンク
+  mapUrl: "https://maps.app.goo.gl/hxhUZwnjegFiybgCA",
   mapQuery: "山梨県富士吉田市緑ヶ丘1-4-19",
   instagram: "https://www.instagram.com/",
 } as const;
@@ -19,7 +22,6 @@ export const site = {
 export const nav = [
   { href: "/", label: "home" },
   { href: "/menu", label: "menu" },
-  { href: "/store", label: "store" },
   { href: "/reserve", label: "reserve" },
   { href: "/access", label: "access" },
   { href: "/recruit", label: "recruit" },

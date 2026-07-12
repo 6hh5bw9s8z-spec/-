@@ -44,6 +44,16 @@ export default function AccessPage() {
           referrerPolicy="no-referrer-when-downgrade"
         />
       </div>
+      <p className="mt-4 text-center">
+        <a
+          href={site.mapUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-[family-name:var(--font-en)] text-xs tracking-[0.25em] underline underline-offset-8 transition-opacity hover:opacity-50"
+        >
+          open in google maps
+        </a>
+      </p>
 
       <dl className="mt-14 divide-y divide-line border-y border-line">
         <div className="flex flex-col gap-2 py-6 md:flex-row md:gap-0">
@@ -83,10 +93,14 @@ export default function AccessPage() {
             アクセス
           </dt>
           <dd className="text-sm leading-7">
-            富士急行線 月江寺駅・富士山駅が最寄りです
-            <br />
-            お車でのご来店も可能です
+            富士急行線 月江寺駅より徒歩3分
           </dd>
+        </div>
+        <div className="flex flex-col gap-2 py-6 md:flex-row md:gap-0">
+          <dt className="w-40 shrink-0 text-xs tracking-[0.3em] text-muted">
+            駐車場
+          </dt>
+          <dd className="text-sm leading-7">2台完備</dd>
         </div>
         <div className="flex flex-col gap-2 py-6 md:flex-row md:gap-0">
           <dt className="w-40 shrink-0 text-xs tracking-[0.3em] text-muted">
