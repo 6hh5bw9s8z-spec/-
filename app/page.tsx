@@ -22,29 +22,29 @@ export default function Home() {
 
   return (
     <div>
-      {/* hero — 実写真が用意でき次第 /hero.svg を差し替える */}
+      {/* hero — 店内写真。壁が明るいのでロゴはインク色で載せる */}
       <section className="relative flex min-h-svh flex-col items-center justify-center overflow-hidden px-5">
         <Image
-          src="/hero.svg"
-          alt=""
+          src="/hero.jpg"
+          alt="hour hair salon 店内"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-[center_38%]"
         />
-        <h1 className="relative text-center text-background">
+        <h1 className="relative -translate-y-16 text-center text-ink md:-translate-y-10">
           <span className="block font-[family-name:var(--font-en)] text-6xl tracking-[0.5em] md:text-7xl">
             hour
           </span>
-          <span className="mt-4 block font-[family-name:var(--font-en)] text-sm tracking-[0.5em] opacity-90">
+          <span className="mt-4 block font-[family-name:var(--font-en)] text-sm tracking-[0.5em] opacity-80">
             hair&nbsp;&nbsp;salon
           </span>
         </h1>
-        <p className="relative mt-12 text-xs tracking-[0.4em] text-background/90">
+        <p className="relative mt-2 -translate-y-16 text-xs tracking-[0.4em] text-ink/70 md:-translate-y-10">
           {site.tagline}
         </p>
         <span
           aria-hidden
-          className="absolute bottom-10 font-[family-name:var(--font-en)] text-[10px] tracking-[0.4em] text-background/80"
+          className="absolute bottom-10 font-[family-name:var(--font-en)] text-[10px] tracking-[0.4em] text-ink/60"
         >
           scroll
         </span>
