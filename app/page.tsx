@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
 import { formatPrice, menuCategories } from "@/lib/menu";
@@ -21,22 +22,29 @@ export default function Home() {
 
   return (
     <div>
-      {/* hero */}
-      <section className="relative flex min-h-svh flex-col items-center justify-center px-5">
-        <h1 className="text-center">
+      {/* hero — 実写真が用意でき次第 /hero.svg を差し替える */}
+      <section className="relative flex min-h-svh flex-col items-center justify-center overflow-hidden px-5">
+        <Image
+          src="/hero.svg"
+          alt=""
+          fill
+          priority
+          className="object-cover"
+        />
+        <h1 className="relative text-center text-background">
           <span className="block font-[family-name:var(--font-en)] text-6xl tracking-[0.5em] md:text-7xl">
             hour
           </span>
-          <span className="mt-4 block font-[family-name:var(--font-en)] text-sm tracking-[0.5em] text-ink/70">
+          <span className="mt-4 block font-[family-name:var(--font-en)] text-sm tracking-[0.5em] opacity-90">
             hair&nbsp;&nbsp;salon
           </span>
         </h1>
-        <p className="mt-12 text-xs tracking-[0.4em] text-muted">
+        <p className="relative mt-12 text-xs tracking-[0.4em] text-background/90">
           {site.tagline}
         </p>
         <span
           aria-hidden
-          className="absolute bottom-10 font-[family-name:var(--font-en)] text-[10px] tracking-[0.4em] text-muted"
+          className="absolute bottom-10 font-[family-name:var(--font-en)] text-[10px] tracking-[0.4em] text-background/80"
         >
           scroll
         </span>

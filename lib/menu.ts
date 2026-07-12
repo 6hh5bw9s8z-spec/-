@@ -1,5 +1,6 @@
 export type MenuItem = {
-  name: string;
+  name: string; // 英語主体の表記（参考サイト風）
+  ja: string; // 日本語名
   price: number;
   duration?: string;
   note?: string;
@@ -19,10 +20,20 @@ export const menuCategories: MenuCategory[] = [
     title: "cut",
     titleJa: "カット",
     items: [
-      { name: "カット", price: 6600, duration: "60min" },
-      { name: "前髪カット", price: 1650, duration: "20min" },
-      { name: "学生カット（中・高・大学生）", price: 5500, duration: "60min" },
-      { name: "キッズカット（小学生以下）", price: 3850, duration: "40min" },
+      { name: "Haircut", ja: "カット", price: 6600, duration: "60min" },
+      { name: "Bang Trim", ja: "前髪カット", price: 1650, duration: "20min" },
+      {
+        name: "Student Cut",
+        ja: "学生カット（中・高・大学生）",
+        price: 5500,
+        duration: "60min",
+      },
+      {
+        name: "Kids Cut",
+        ja: "キッズカット（小学生以下）",
+        price: 3850,
+        duration: "40min",
+      },
     ],
   },
   {
@@ -30,11 +41,22 @@ export const menuCategories: MenuCategory[] = [
     title: "color",
     titleJa: "カラー",
     items: [
-      { name: "フルカラー", price: 8800, duration: "90min" },
-      { name: "リタッチカラー", price: 6600, duration: "60min" },
-      { name: "ハイライト", price: 12100, duration: "120min" },
+      { name: "Full Color", ja: "フルカラー", price: 8800, duration: "90min" },
       {
-        name: "ダブルカラー",
+        name: "Retouch Color",
+        ja: "リタッチカラー",
+        price: 6600,
+        duration: "60min",
+      },
+      {
+        name: "Highlights",
+        ja: "ハイライト",
+        price: 12100,
+        duration: "120min",
+      },
+      {
+        name: "Double Process Color",
+        ja: "ダブルカラー",
         price: 16500,
         duration: "150min",
         note: "ブリーチ1回込み",
@@ -46,9 +68,19 @@ export const menuCategories: MenuCategory[] = [
     title: "perm",
     titleJa: "パーマ",
     items: [
-      { name: "パーマ", price: 11000, duration: "120min" },
-      { name: "ポイントパーマ", price: 7700, duration: "90min" },
-      { name: "縮毛矯正", price: 18700, duration: "180min" },
+      { name: "Perm", ja: "パーマ", price: 11000, duration: "120min" },
+      {
+        name: "Partial Perm",
+        ja: "ポイントパーマ",
+        price: 7700,
+        duration: "90min",
+      },
+      {
+        name: "Japanese Straightening",
+        ja: "縮毛矯正",
+        price: 18700,
+        duration: "180min",
+      },
     ],
   },
   {
@@ -56,9 +88,15 @@ export const menuCategories: MenuCategory[] = [
     title: "treatment",
     titleJa: "トリートメント",
     items: [
-      { name: "トリートメント", price: 5500, duration: "30min" },
       {
-        name: "髪質改善トリートメント",
+        name: "Treatment",
+        ja: "トリートメント",
+        price: 5500,
+        duration: "30min",
+      },
+      {
+        name: "Repair Treatment",
+        ja: "髪質改善トリートメント",
         price: 13200,
         duration: "90min",
         note: "カット別",
@@ -70,8 +108,18 @@ export const menuCategories: MenuCategory[] = [
     title: "head spa",
     titleJa: "ヘッドスパ",
     items: [
-      { name: "ヘッドスパ 30min", price: 5500, duration: "30min" },
-      { name: "ヘッドスパ 60min", price: 8800, duration: "60min" },
+      {
+        name: "Head Spa 30min",
+        ja: "ヘッドスパ 30分",
+        price: 5500,
+        duration: "30min",
+      },
+      {
+        name: "Head Spa 60min",
+        ja: "ヘッドスパ 60分",
+        price: 8800,
+        duration: "60min",
+      },
     ],
   },
 ];

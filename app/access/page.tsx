@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageTitle from "@/components/PageTitle";
 import { site } from "@/lib/site";
 
@@ -11,6 +12,28 @@ export default function AccessPage() {
   return (
     <div className="mx-auto max-w-3xl px-5 pb-28">
       <PageTitle en="access" ja="アクセス" />
+
+      {/* 店舗ブロック（参考サイトの Shops 風） */}
+      <div className="pb-16 text-center">
+        <h2 className="font-[family-name:var(--font-en)] text-2xl tracking-[0.25em]">
+          hour hair salon
+        </h2>
+        <p className="mt-6 text-sm leading-8">{site.address}</p>
+        <p className="mt-2">
+          <a
+            href={`tel:${site.tel.replaceAll("-", "")}`}
+            className="text-sm underline underline-offset-4"
+          >
+            {site.tel}
+          </a>
+        </p>
+        <Link
+          href="/reserve"
+          className="mt-8 inline-block border border-ink px-14 py-4 font-[family-name:var(--font-en)] text-sm tracking-[0.2em] transition-colors hover:bg-ink hover:text-background"
+        >
+          Reserve
+        </Link>
+      </div>
 
       <div className="aspect-[4/3] w-full bg-pink-soft md:aspect-[16/9]">
         <iframe
