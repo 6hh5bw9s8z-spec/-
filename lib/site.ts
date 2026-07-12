@@ -3,17 +3,18 @@ export const site = {
   nameFull: "hour hair salon",
   tagline: "時間を、ほどく場所。",
   description:
-    "hour hair salon ― 余白と光を大切にした、小さなヘアサロン。カット・カラー・トリートメントとオリジナルプロダクトのオンラインストア。",
-  tel: "03-0000-0000",
+    "hour hair salon ― 山梨県富士吉田市のヘアサロン。カット・カラー・パーマとオリジナルプロダクトのオンラインストア。",
+  // TODO: 実際の電話番号に差し替える
+  tel: "0555-00-0000",
   email: "info@hour-hairsalon.jp",
-  address: "〒150-0001 東京都渋谷区神宮前 0-0-0 hour bldg 2F",
-  addressEn: "0-0-0 Jingumae, Shibuya-ku, Tokyo",
+  address: "〒403-0004 山梨県富士吉田市緑ヶ丘1-4-19 相川ビルC号",
+  addressEn: "Aikawa Bldg C, 1-4-19 Midorigaoka, Fujiyoshida, Yamanashi",
   hours: [
-    { label: "平日", value: "11:00 – 20:00" },
-    { label: "土日祝", value: "10:00 – 19:00" },
-    { label: "定休日", value: "毎週火曜・第2水曜" },
+    // TODO: 実際の営業時間に差し替える
+    { label: "営業時間", value: "9:00 – 19:00" },
+    { label: "定休日", value: "毎週火曜・ほか月2日" },
   ],
-  mapQuery: "東京都渋谷区神宮前",
+  mapQuery: "山梨県富士吉田市緑ヶ丘1-4-19",
   instagram: "https://www.instagram.com/",
 } as const;
 

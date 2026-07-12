@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageTitle from "@/components/PageTitle";
-import { formatPrice, menuCategories } from "@/lib/menu";
+import { menuCategories, priceLabel } from "@/lib/menu";
 
 export const metadata: Metadata = {
   title: "menu",
@@ -31,7 +31,7 @@ export default function MenuPage() {
               {category.items.map((item) => (
                 <li key={item.name}>
                   <p className="font-[family-name:var(--font-en)] text-base tracking-[0.12em]">
-                    {item.name} – {formatPrice(item.price)}
+                    {item.name} – {priceLabel(item)}
                   </p>
                   <p className="mt-1 text-[11px] text-muted">
                     {item.ja}

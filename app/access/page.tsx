@@ -68,7 +68,7 @@ export default function AccessPage() {
         </div>
         <div className="flex flex-col gap-2 py-6 md:flex-row md:gap-0">
           <dt className="w-40 shrink-0 text-xs tracking-[0.3em] text-muted">
-            営業時間
+            営業時間・定休日
           </dt>
           <dd className="space-y-1 text-sm">
             {site.hours.map((h) => (
@@ -80,12 +80,12 @@ export default function AccessPage() {
         </div>
         <div className="flex flex-col gap-2 py-6 md:flex-row md:gap-0">
           <dt className="w-40 shrink-0 text-xs tracking-[0.3em] text-muted">
-            最寄り駅
+            アクセス
           </dt>
           <dd className="text-sm leading-7">
-            東京メトロ 明治神宮前駅 5番出口より徒歩 5 分
+            富士急行線 月江寺駅・富士山駅が最寄りです
             <br />
-            JR 原宿駅 表参道口より徒歩 8 分
+            お車でのご来店も可能です
           </dd>
         </div>
         <div className="flex flex-col gap-2 py-6 md:flex-row md:gap-0">

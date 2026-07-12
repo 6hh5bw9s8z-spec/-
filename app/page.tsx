@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
-import { formatPrice, menuCategories } from "@/lib/menu";
+import { menuCategories, priceLabel } from "@/lib/menu";
 import { products } from "@/lib/products";
 import { site } from "@/lib/site";
 
@@ -84,7 +84,7 @@ export default function Home() {
                     >
                       <span>{item.name}</span>
                       <span className="shrink-0 text-muted">
-                        {formatPrice(item.price)}
+                        {priceLabel(item)}
                       </span>
                     </li>
                   ))}
