@@ -32,6 +32,19 @@ export const menuCategories: MenuCategory[] = [
     ],
   },
   {
+    id: "treatment",
+    title: "treatment",
+    titleJa: "トリートメント",
+    items: [
+      {
+        name: "Treatment",
+        ja: "トリートメント",
+        price: 3300,
+        from: true,
+      },
+    ],
+  },
+  {
     id: "perm",
     title: "perm / straight",
     titleJa: "パーマ・ストレート",

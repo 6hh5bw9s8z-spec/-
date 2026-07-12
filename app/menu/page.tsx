@@ -16,6 +16,8 @@ export default function MenuPage() {
       <p className="text-center text-xs text-muted">
         価格はすべて税込表示です。仕上がりの状態や髪の長さにより
         お時間・料金が変わる場合があります。
+        <br />
+        胸下の長さの方はレングスチャージ ¥1,500 を頂戴します。
       </p>
 
       <div className="mt-20 space-y-20 text-center">
