@@ -32,19 +32,6 @@ export const menuCategories: MenuCategory[] = [
     ],
   },
   {
-    id: "treatment",
-    title: "treatment",
-    titleJa: "トリートメント",
-    items: [
-      {
-        name: "Treatment",
-        ja: "トリートメント",
-        price: 3300,
-        from: true,
-      },
-    ],
-  },
-  {
     id: "perm",
     title: "perm / straight",
     titleJa: "パーマ・ストレート",
@@ -56,9 +43,28 @@ export const menuCategories: MenuCategory[] = [
         from: true,
       },
       {
+        name: "Haircut + Digital Perm",
+        ja: "カット＋デジタルパーマ",
+        price: 17800,
+        from: true,
+      },
+      {
         name: "Haircut + Straightening",
         ja: "カット＋ストレート",
         price: 24000,
+        from: true,
+      },
+    ],
+  },
+  {
+    id: "treatment",
+    title: "treatment",
+    titleJa: "トリートメント",
+    items: [
+      {
+        name: "Treatment",
+        ja: "トリートメント",
+        price: 3300,
         from: true,
       },
     ],
