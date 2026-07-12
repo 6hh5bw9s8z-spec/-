@@ -4,15 +4,13 @@ export const site = {
   tagline: "時間を、ほどく場所。",
   description:
     "hour hair salon ― 山梨県富士吉田市のヘアサロン。カット・カラー・パーマとオリジナルプロダクトのオンラインストア。",
-  // TODO: 実際の電話番号に差し替える
-  tel: "0555-00-0000",
+  tel: "070-5577-1105",
   email: "info@hour-hairsalon.jp",
   address: "〒403-0004 山梨県富士吉田市緑ヶ丘1-4-19 相川ビルC号",
   addressEn: "Aikawa Bldg C, 1-4-19 Midorigaoka, Fujiyoshida, Yamanashi",
   hours: [
-    // TODO: 実際の営業時間に差し替える
-    { label: "営業時間", value: "9:00 – 19:00" },
-    { label: "定休日", value: "毎週火曜・ほか月2日" },
+    { label: "営業時間", value: "10:00 – 21:00" },
+    { label: "定休日", value: "毎週火曜・ほか月2日（不定休）" },
   ],
   mapQuery: "山梨県富士吉田市緑ヶ丘1-4-19",
   instagram: "https://www.instagram.com/",
