@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ReserveButton from "@/components/ReserveButton";
+import { instagramPosts, instagramUser } from "@/lib/instagram";
 import { menuCategories, priceLabel } from "@/lib/menu";
 import { site } from "@/lib/site";
 
@@ -95,6 +96,47 @@ export default function Home() {
             >
               view all menu
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* instagram（お知らせ） */}
+      <section className="border-t border-line bg-pink-soft/60">
+        <div className="mx-auto max-w-4xl px-5 py-24 md:py-32">
+          <SectionHeading en="instagram" ja="お知らせ" />
+          <div className="mt-14 grid grid-cols-3 gap-3 md:gap-6">
+            {instagramPosts.map((post) => (
+              <a
+                key={post.image}
+                href={post.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block"
+              >
+                <div className="overflow-hidden bg-pink-soft">
+                  <Image
+                    src={post.image}
+                    alt={post.caption}
+                    width={800}
+                    height={800}
+                    className="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                  />
+                </div>
+                <p className="mt-3 hidden text-xs leading-6 text-muted md:line-clamp-2">
+                  {post.caption}
+                </p>
+              </a>
+            ))}
+          </div>
+          <div className="mt-12 text-center">
+            <a
+              href={`https://www.instagram.com/${instagramUser}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-[family-name:var(--font-en)] text-xs tracking-[0.25em] underline underline-offset-8 transition-opacity hover:opacity-50"
+            >
+              @{instagramUser}
+            </a>
           </div>
         </div>
       </section>

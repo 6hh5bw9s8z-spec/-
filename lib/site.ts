@@ -18,7 +18,8 @@ export const site = {
   // Googleマップの共有リンク
   mapUrl: "https://maps.app.goo.gl/hxhUZwnjegFiybgCA",
   mapQuery: "山梨県富士吉田市緑ヶ丘1-4-19",
-  instagram: "https://www.instagram.com/",
+  // TODO: 実際のアカウントに差し替える（lib/instagram.ts の instagramUser と合わせる）
+  instagram: "https://www.instagram.com/hour_hairsalon",
 } as const;
 
 export const nav = [
